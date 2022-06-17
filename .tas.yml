@@ -1,0 +1,16 @@
+---
+framework: jest
+preRun:
+  command:
+    - yarn install && yarn run build
+preMerge:
+  pattern:
+    - "__tests__/*/*.spec.tsx"
+postMerge:
+  pattern: 
+    - "__tests__/*/*.spec.tsx"
+postRun:
+  command:
+    - yarn --version
+configFile: jest.config.js
+version: 1.0
